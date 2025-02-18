@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Editor from "./Component/EditorComponent/index"; 
 
-function App() {
+const App: React.FC = () => {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <h1>Editor Example</h1>
+      <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+        <Editor placeholder="Enter your content here..." />
+      </div>
+
+      {/* Display the saved editor data */}
+      {/* <div style={{ marginTop: "20px" }}>
+        <h2>Saved Data:</h2>
+        <pre>{JSON.stringify(editorData, null, 2)}</pre>
+      </div> */}
     </div>
   );
-}
+};
 
 export default App;
